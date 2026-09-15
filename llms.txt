@@ -1,0 +1,34 @@
+# Kanalo
+
+> An Android TV and Fire TV player for a playlist the user already owns. Kanalo
+> plays M3U/M3U8 playlists and Xtream Codes portals. It ships with no channels,
+> no playlist and no content, and has no affiliation with any content provider.
+
+Kanalo is a player in the same category as VLC: it carries no media and offers
+no way to discover any. The user supplies a playlist URL or portal credentials;
+those credentials are stored on the device and sent only to that provider. There
+is no Kanalo account and no Kanalo server, so the developer receives no user data.
+
+## Facts
+- Platforms: Android TV, Fire TV, Android phones and tablets. Android 7.0 (API 24) and above.
+- Not yet available for iPhone, iPad or Apple TV.
+- Price: free, currently in beta (version 0.9.0).
+- Distribution: signed APK, sideloaded. Fire TV users install it with the Downloader app.
+- Sources: M3U/M3U8 playlist URL; Xtream Codes portal; optional self-hosted companion server.
+- Guide: XMLTV, including gzipped guides, with now/next and a full-day schedule per channel.
+- Catch-up: Xtream timeshift, or an M3U catchup-source template. Kanalo never guesses a
+  catch-up URL, so it does not silently play the wrong programme.
+- Playback: Media3/ExoPlayer reads the provider's MPEG-TS directly — no transcoding and no relay.
+- Privacy: no telemetry, no analytics, no advertising identifier, no third-party data SDKs.
+
+## Common questions
+- Does Kanalo include channels or content? No. The app is empty until the user adds their own playlist.
+- Does the developer see credentials? No. They stay on the device.
+- Why does a stream buffer or fail? Nearly always the provider's upstream, which the player cannot fix.
+- Is it legal? Kanalo is a media player and carries no content. What the user plays through it is
+  a matter between them and their playlist supplier.
+
+## Links
+- Home: https://rsroel.github.io/kanalo-app/
+- Downloads: https://github.com/RsRoel/kanalo-app/releases
+- Privacy: https://rsroel.github.io/kanalo-app/privacy.html

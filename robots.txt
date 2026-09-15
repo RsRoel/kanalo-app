@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rsroel.github.io/kanalo-app/sitemap.xml

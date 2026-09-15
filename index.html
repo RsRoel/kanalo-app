@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kanalo — M3U &amp; Xtream player for Android TV and Fire TV</title>
+<meta name="description" content="Kanalo is an Android TV and Fire TV player for your own M3U or Xtream Codes playlist. It ships with no channels and no content — you bring the playlist, and your credentials never leave the device.">
+<link rel="canonical" href="https://rsroel.github.io/kanalo-app/">
+<style>
+:root{--bg:#fbfaf8;--fg:#17181c;--muted:#5c6070;--line:#e3e1dc;--accent:#2f6f4f;--card:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#101216;--fg:#eceef2;--muted:#9aa1b0;--line:#252932;--accent:#6cc39a;--card:#171a20}}
+:root[data-theme=dark]{--bg:#101216;--fg:#eceef2;--muted:#9aa1b0;--line:#252932;--accent:#6cc39a;--card:#171a20}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:16px}
+header{padding-block:56px 32px}
+h1{font-size:2.1rem;line-height:1.15;margin:0 0 .4em;letter-spacing:-.02em}
+.tag{color:var(--muted);font-size:1.12rem;margin:0}
+h2{font-size:1.15rem;margin:2.4em 0 .6em;letter-spacing:-.01em}
+a{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:600;padding:13px 22px;border-radius:9px;margin:26px 0 8px}
+.meta{color:var(--muted);font-size:.9rem;margin:0 0 8px}
+ul{padding-left:1.15em}
+li{margin:.35em 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:18px 20px;margin:18px 0}
+code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:.9em}
+footer{border-top:1px solid var(--line);margin-top:56px;padding-block:24px 56px;color:var(--muted);font-size:.9rem}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Kanalo",
+  "applicationCategory": "MultimediaApplication",
+  "applicationSubCategory": "Media player",
+  "operatingSystem": "Android 7.0+, Android TV, Fire TV",
+  "description": "An Android TV and Fire TV player for your own M3U or Xtream Codes playlist. Ships with no channels and no content; credentials stay on the device.",
+  "softwareVersion": "0.9.0",
+  "url": "https://rsroel.github.io/kanalo-app/",
+  "downloadUrl": "https://github.com/RsRoel/kanalo-app/releases/latest",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+  "featureList": [
+    "M3U and M3U8 playlist support",
+    "Xtream Codes portal support",
+    "XMLTV electronic programme guide with now and next",
+    "Catch-up via Xtream timeshift or M3U catchup-source",
+    "Remote-first navigation for Android TV and Fire TV",
+    "No telemetry and no account"
+  ],
+  "isAccessibleForFree": true
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>Kanalo</h1>
+<p class="tag">An Android TV and Fire TV player for <strong>your own</strong> playlist.</p>
+</header>
+
+<p>Kanalo plays an M3U playlist or an Xtream Codes portal that you already have. It is a player and nothing else: <strong>it ships with no channels, no playlist, and no content of any kind</strong>. Nothing is bundled, nothing is discoverable in the app, and Kanalo has no affiliation with any content provider.</p>
+
+<p>Your portal address, username and password are stored on the device and are sent only to the provider you entered them for. They never reach us, because there is no server of ours in the path.</p>
+
+<a class="btn" href="https://github.com/RsRoel/kanalo-app/releases/latest">Download the APK</a>
+<p class="meta">Version 0.9.0 · Android 7.0+ · Android TV, Fire TV, phones and tablets · free, in beta</p>
+
+<h2>What it does</h2>
+<ul>
+<li><strong>Your sources</strong> — an M3U/M3U8 playlist URL or an Xtream Codes portal.</li>
+<li><strong>A real guide</strong> — categories, channels and a full day schedule from XMLTV, with now and next on every row. Repeated back-to-back airings collapse into one entry instead of flooding the list.</li>
+<li><strong>Catch-up</strong> where your source supports it — Xtream timeshift, or an M3U <code>catchup-source</code>. Kanalo never guesses a catch-up URL, so it will not silently play the wrong programme.</li>
+<li><strong>Built for a remote</strong> — up and down zap channels, OK opens the transport bar, BACK opens the guide on the channel you are watching.</li>
+<li><strong>Direct playback</strong> — the provider's stream is read as-is. No transcoding, no relay, no account.</li>
+</ul>
+
+<h2>Installing on a Fire TV Stick</h2>
+<div class="card">
+<ol>
+<li>On the Fire TV, install the free <strong>Downloader</strong> app from the Amazon Appstore.</li>
+<li>In <em>Settings → My Fire TV → Developer options</em>, allow installing unknown apps for Downloader.</li>
+<li>Open Downloader and enter the address of the APK from the download link above.</li>
+<li>Install it, then open Kanalo and enter your playlist.</li>
+</ol>
+</div>
+
+<h2>Installing on Android TV or a phone</h2>
+<p>Download the APK and open it, allowing installation from that source when prompted. With a cable or network debugging you can also use <code>adb install kanalo-0.9.0.apk</code>.</p>
+
+<h2>Is this legal?</h2>
+<p>Kanalo is a media player, in the same sense that VLC is a media player. It carries no content and provides no way to find any. What you play through it, and whether you are entitled to play it, is between you and whoever supplies your playlist.</p>
+
+<h2>Frequently asked</h2>
+<p><strong>Does Kanalo include channels?</strong> No. The app is empty until you add a playlist you already have.</p>
+<p><strong>Do you see my credentials?</strong> No. They are stored on your device and used only to talk to your provider. There is no Kanalo account and no Kanalo server.</p>
+<p><strong>Why does a channel buffer or fail?</strong> Almost always because the provider's stream is down or overloaded. Kanalo plays what it is given; it cannot fix an upstream that is not sending data.</p>
+<p><strong>Is there an iPhone or Apple TV version?</strong> Not yet.</p>
+<p><strong>What does it cost?</strong> Nothing today. It is in beta.</p>
+
+<footer>
+<p>Kanalo · <a href="privacy.html">Privacy</a> · <a href="https://github.com/RsRoel/kanalo-app/releases">All releases</a></p>
+</footer>
+</div>
+</body>
+</html>
