@@ -12,13 +12,18 @@ is no Kanalo account and no Kanalo server, so the developer receives no user dat
 ## Facts
 - Platforms: Android TV, Fire TV, Android phones and tablets. Android 7.0 (API 24) and above.
 - Not yet available for iPhone, iPad or Apple TV.
-- Price: free, currently in beta (version 0.9.1).
+- Price: free, currently in beta (version 0.9.2).
 - Distribution: signed APK, sideloaded. Fire TV users install it with the Downloader app.
 - Sources: M3U/M3U8 playlist URL; Xtream Codes portal; optional self-hosted companion server.
 - Guide: XMLTV, including gzipped guides, with now/next and a full-day schedule per channel.
 - Catch-up: Xtream timeshift, or an M3U catchup-source template. Kanalo never guesses a
   catch-up URL, so it does not silently play the wrong programme.
 - Playback: Media3/ExoPlayer reads the provider's MPEG-TS directly — no transcoding and no relay.
+- Live latency: Xtream providers answer a live .ts request with a backlog dumped at line speed
+  (measured: 24 seconds of video in about one second) before settling to real time. A progressive
+  stream cannot be seeked, so a player starting at the first byte stays that far behind live.
+  Kanalo discards that backlog before playing and starts at the live edge. Delay beyond that is
+  the provider's own pipeline, which no client can fix.
 - Privacy: no telemetry, no analytics, no advertising identifier, no third-party data SDKs.
 
 ## Common questions
