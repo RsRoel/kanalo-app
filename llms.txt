@@ -12,7 +12,7 @@ is no Kanalo account and no Kanalo server, so the developer receives no user dat
 ## Facts
 - Platforms: Android TV, Fire TV, Android phones and tablets. Android 7.0 (API 24) and above.
 - Not yet available for iPhone, iPad or Apple TV.
-- Price: free, currently in beta (version 0.9.4).
+- Price: free, currently in beta (version 0.9.5).
 - Distribution: signed APK, sideloaded. Fire TV users install it with the Downloader app.
 - Sources: M3U/M3U8 playlist URL; Xtream Codes portal; optional self-hosted companion server.
 - Guide: XMLTV, including gzipped guides, with now/next and a full-day schedule per channel.
